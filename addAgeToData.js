@@ -76,4 +76,3 @@ function routine(){
         console.log(people[i].age);
     }
 }
-routine();

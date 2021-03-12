@@ -34,7 +34,9 @@ function searchByName(){
         alert("Insert valid input");
     }
 }
+function saveObjectToArray(object){
 
+}
 
 function AppendToTable(filteredPeople){
     let tableReference = document.getElementsByName("DataTable")[0];
@@ -45,8 +47,9 @@ function AppendToTable(filteredPeople){
     
     }
     for (let i=0; i < filteredPeople.length; i++){//Can make a nested for loop.
-        let row = tableReference.insertRow(i+1)
+        let row = tableReference.insertRow(i+1);
         let people = filteredPeople[i];
+<<<<<<< HEAD
         console.log(findDescendants(people));
         let cellfirstName = row.insertCell(0);
         cellfirstName.innerHTML = people.firstName;
@@ -71,6 +74,34 @@ function AppendToTable(filteredPeople){
         ;
         let cellparents = row.insertCell(10);
         cellparents.innerHTML = people.parents;
+=======
+        for(let p = 0; p < Object.keys(people).length; p++){
+            row.insertCell(p).innerHTML = people[Object.keys(people)[p]];
+        }
+        // let people = filteredPeople[i];
+        // let cellfirstName = row.insertCell(0);
+        // cellfirstName.innerHTML = people.firstName;
+        // let celllastName = row.insertCell(1);
+        // celllastName.innerHTML = people.lastName;
+        // let cellId = row.insertCell(2);
+        // cellId.innerHTML = people.id;
+        // let cellgender = row.insertCell(3);
+        // cellgender.innerHTML = people.gender;
+        // let celldob = row.insertCell(4);
+        // celldob.innerHTML = people.dob;
+        // let cellheight = row.insertCell(5);
+        // cellheight.innerHTML = people.height;
+        // let cellweight = row.insertCell(6);
+        // cellweight.innerHTML = people.weight;
+        // let celleyeColor = row.insertCell(7);
+        // celleyeColor.innerHTML = people.eyeColor;
+        // let celloccupation = row.insertCell(8);
+        // celloccupation.innerHTML = people.occupation;
+        // let cellcurrentSpouse = row.insertCell(9);
+        // cellcurrentSpouse.innerHTML = people.currentSpouse;
+        // let cellparents = row.insertCell(10);
+        // cellparents.innerHTML = people.parents;
+>>>>>>> 137f782deca4c9b42624b880e1b067ce536dd221
 }
     
     console.log();
