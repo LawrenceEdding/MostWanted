@@ -44,7 +44,7 @@ function AppendToTable(filteredPeople){
     }
     
     }
-    for (let i=0; i < filteredPeople.length; i++){
+    for (let i=0; i < filteredPeople.length; i++){//Can make a nested for loop.
         let row = tableReference.insertRow(i+1)
         let people = filteredPeople[i];
         console.log(findDescendants(people));
