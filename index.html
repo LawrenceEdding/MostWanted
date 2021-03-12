@@ -9,6 +9,7 @@
     
   </head>
   <body>
+    <div class="sidenav">
     <form id="nameForm">
         <label for="fname">First name:</label><br>
         <input type="text" id="fname" name="fname" value="Joy"><br>
@@ -16,18 +17,30 @@
         <label for="lname">Last name:</label><br>
         <input type="text" id="lname" name="lname" value="Madden"><br>
 
-        <label for="weight">Weight:</label><br>
-        <input type="text" id="weight" name="weight" value="weight in lbs."><br>
+        <label for="id">Id:</label><br>
+        <input type="text" id="id" name="id"><br>
 
-        <label for="occupation">occupation:</label><br>
-        <input type="text" id="occupation" name="occupation" value="student"><br><br>
+        <label for="dob">DOB</label><br>
+        <input type="text" id="dob" name="dob"><br>
+
+        <label for="weight">Weight:</label><br>
+        <input type="text" id="weight" name="weight" value=""><br>
+
+        <label for="occupation">Occupation:</label><br>
+        <input type="text" id="occupation" name="occupation" value=""><br>
+
+        <label for="height">Height</label><br>
+        <input type="text" id="height" name="height"><br>
+
+        <label for="spouse">Current Spouse</label><br>
+        <input type="text" id="spouse" name="spouse"><br></br>
 
         <p>Gender:</p>
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label><br>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label><br>
-        <input type="radio" id="nullGender" name="gender" value="null">
+        <input type="radio" id="nullGender" name="gender" value="">
         <label for="nullGender">Don't know</label>
         <br><br><br>
 
@@ -42,7 +55,7 @@
         <label for="blue">Blue</label><br>
         <input type="radio" id="green" name="eyeColor" value="green">
         <label for="green">Green</label><br>
-        <input type="radio" id="nullEye" name="eyeColor" value="null">
+        <input type="radio" id="nullEye" name="eyeColor" value="">
         <label for="nullEye">Don't know</label><br><br>
 
         <div class="slidecontainer">
@@ -53,17 +66,44 @@
         <br>
 
 
-        <input type="button" onclick="searchByName()" value="Submit">
-    </form> 
+              <input type="button" onclick="searchByName()" value="Submit">
+          </form>
+      <br>
+    </div>
+    <div class="main">
+      <table class="table" name="DataTable">
+        <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Id</th>
+            <th scope="col">Gender</th>
+            <th scope="col">D.O.B.</th>
+            <th scope="col">Height</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Eye color</th>
+            <th scope="col">Occupation</th>
+            <th scope="col">Current spouse</th>
+            <th scope="col">Parents</th>
+          </tr>
+        </thead>
+        <tbody id= "tableBody">
+          
+        </tbody>
+      </table>
+    </div>  
+
       <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="styles/style.js"></script>
     <script src="data.js"></script>
     <script src="app.js"></script>
+    <script src ="addAgeToData.js"></script>
+    <script src = "recursionDescendant.js"></script>
   </body>
 </html>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -96,31 +136,11 @@
         
         <input type="button" onclick="searchByName()" value="Submit">
         
-    </form> 
-    <br>
-    <table class="table" name="DataTable">
-      <thead>
-        <tr>
-          <th scope="col">First name</th>
-          <th scope="col">Last name</th>
-          <th scope="col">Id</th>
-          <th scope="col">Gender</th>
-          <th scope="col">D.O.B.</th>
-          <th scope="col">Height</th>
-          <th scope="col">Weight</th>
-          <th scope="col">Eye color</th>
-          <th scope="col">Occupation</th>
-          <th scope="col">Current spouse</th>
-          <th scope="col">Parents</th>
-        </tr>
-      </thead>
-      <tbody id= "tableBody">
-        
-      </tbody>
-    </table>
+    </form>  
+
       
 
     <script src="data.js"></script>
     <script src="app.js"></script>
   </body>
-</html>
+</html>-->
