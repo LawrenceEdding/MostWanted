@@ -3,67 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>devCodeCamp &middot; Most Wanted</title>
-    <link rel="stylesheet" href="styles/style.css">
-  </head>
-  <body>
-    <form id="nameForm">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="Joy"><br>
-
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Madden"><br>
-
-        <label for="weight">Weight:</label><br>
-        <input type="text" id="weight" name="weight" value="weight in lbs."><br>
-
-        <label for="occupation">occupation:</label><br>
-        <input type="text" id="occupation" name="occupation" value="student"><br><br>
-
-        <p>Gender:</p>
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-        <input type="radio" id="nullGender" name="gender" value="null">
-        <label for="nullGender">Don't know</label>
-        <br><br><br>
-
-        <p>Eye Color:</p>
-        <input type="radio" id="brown" name="eyeColor" value="brown">
-        <label for="brown">Brown</label><br>
-        <input type="radio" id="hazel" name="eyeColor" value="hazel">
-        <label for="hazel">Hazel</label><br>
-        <input type="radio" id="black" name="eyeColor" value="black">
-        <label for="black">Black</label><br>
-        <input type="radio" id="blue" name="eyeColor" value="blue">
-        <label for="blue">Blue</label><br>
-        <input type="radio" id="green" name="eyeColor" value="green">
-        <label for="green">Green</label><br>
-        <input type="radio" id="nullEye" name="eyeColor" value="null">
-        <label for="nullEye">Don't know</label><br><br>
-
-        <div class="slidecontainer">
-          <label for="myRange">Age</label> <br>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <span id="demo">Number:</span>
-        <br>
-
-
-        <input type="button" onclick="searchByName()" value="Submit">
-    </form> 
-      
-    <script src="styles/style.js"></script>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>devCodeCamp &middot; Most Wanted</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -108,6 +47,8 @@
           <th scope="col">Occupation</th>
           <th scope="col">Current spouse</th>
           <th scope="col">Parents</th>
+          <th scope="col">Siblings</th>
+          
         </tr>
       </thead>
       <tbody id= "tableBody">
