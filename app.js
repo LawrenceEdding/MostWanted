@@ -47,6 +47,7 @@ function AppendToTable(filteredPeople){
     for (let i=0; i < filteredPeople.length; i++){
         let row = tableReference.insertRow(i+1)
         let people = filteredPeople[i];
+        console.log(findDescendants(people));
         let cellfirstName = row.insertCell(0);
         cellfirstName.innerHTML = people.firstName;
         let celllastName = row.insertCell(1);
@@ -66,11 +67,34 @@ function AppendToTable(filteredPeople){
         let celloccupation = row.insertCell(8);
         celloccupation.innerHTML = people.occupation;
         let cellcurrentSpouse = row.insertCell(9);
-        cellcurrentSpouse.innerHTML = people.currentSpouse;
+        cellcurrentSpouse.innerHTML = people.currentSpouse ? getPersonName(people.currentSpouse) :"";
+        ;
         let cellparents = row.insertCell(10);
         cellparents.innerHTML = people.parents;
 }
     
     console.log();
 }
+
+function findDescendants(person){
+    let descendats = people.filter(function (p) {
+        if ( p.parents.includes(person.id))
+            return true;
+        return false;
+    })
+return descendats;
+}
+
+function getPersonName(personId){
+    let person = people.filter(function (p) {
+        if (personId == p.id){
+            return true;
+
+        }else {
+            return false;
+        }
+    })
+    return person[0].firstName+" "+person[0].lastName
+}
+
 
