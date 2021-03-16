@@ -25,7 +25,6 @@ function searchByName(){
         return true;
     });
     
-    // Rather than console logging, you need to append the filteredPeople to a table.
     if(filteredPeople.length > 0){
         console.log(filteredPeople);
         AppendToTable(filteredPeople);
@@ -47,7 +46,7 @@ function AppendToTable(filteredPeople){
     let row;
     let people;
     let obj;
-    for (let i=0; i < filteredPeople.length; i++){//Can make a nested for loop.
+    for (let i=0; i < filteredPeople.length; i++){
         row = tableReference.insertRow(i+1);
         people = filteredPeople[i];
         for(let p = 0; p < Object.keys(people).length; p++){//MAKE SWITCH CASE
@@ -55,7 +54,7 @@ function AppendToTable(filteredPeople){
             if(obj === 'id'){
                 row.insertCell(p).innerHTML = people[obj];
                 row.id = people[obj];
-                row.addEventListener('click',function (){//FIXME Make append value to event listener
+                row.addEventListener('click',function (){
                     //Erase all rows except the one clicked
                     let savedRow = [findPersonbyID(this.id)];
                     AppendToTable(savedRow);
@@ -139,7 +138,7 @@ function displayParents(array){
         return '';
 }
 
-function sameParent(person){//NOT TESTED Probably prints self into sibling array. FIXME
+function sameParent(person){
     if(person.parents.length > 0){
         let siblings = people.filter(function (p) {
             for(let i = 0; i < person.parents.length; i++){
@@ -158,7 +157,6 @@ function relationTable(id){
     let kids = [];
     let grandkids = [];
     let siblings;
-    let grandparent = [];
     let descendantArray = [[]];
 
 
@@ -167,15 +165,6 @@ function relationTable(id){
         for (let i = 0; i < parentId.length; i++)
             parent.push(findPersonbyID(parentId[i]));
     }
-
-
-    // if(parent.length > 0){
-    //     if(parent.parents.length > 0){
-    //         let parentId = parent.parents;
-    //         for (let i = 0; i < parentId.length; i++)
-    //             grandparent.push(findPersonbyID(parentId[i]));
-    //     }
-    // }
     descendantArray = showDescendants(person);
     for(let i = 0; i < descendantArray.length; i++){
         for(let p = 0; p < descendantArray[i].length; p++){
@@ -199,7 +188,7 @@ function relationTable(id){
     appendToFamilyTableArray(siblings,'Sibling',tableReference);
     appendToFamilyTableArray(kids,'Child',tableReference);
     appendToFamilyTableArray(grandkids,'Grandchild',tableReference);
-    //Spouse, Parents ,Grandparents, siblings, kids, grandkids TODO GRANDPARENTS
+    //Spouse, Parents, siblings, kids, grandkids
 }
 function appendToFamilyTableArray(array, relation, table){
     if(typeof array === 'object'){
@@ -207,7 +196,7 @@ function appendToFamilyTableArray(array, relation, table){
         let people;
         let obj;
         console.log(array);
-        for (let i=0; i < array.length; i++){//Can make a nested for loop.
+        for (let i=0; i < array.length; i++){
             row = table.insertRow(i+1);
             people = array[i];
             for(let p = 0; p < 5; p++){
