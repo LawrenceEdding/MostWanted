@@ -11,28 +11,28 @@
     <div class="sidenav">
     <form id="nameForm">
         <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="Joy"><br>
+        <input type="text" id="fname" name="fname" value="" size="10"><br>
 
         <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Madden"><br>
+        <input type="text" id="lname" name="lname" value=""size="10" ><br>
 
         <label for="id">Id:</label><br>
-        <input type="text" id="id" name="id"><br>
+        <input type="text" id="id" name="id" size="10"><br>
 
-        <label for="dob">DOB</label><br>
-        <input type="text" id="dob" name="dob"><br>
+        <label for="dob">DOB:</label><br>
+        <input type="text" id="dob" name="dob" size='10'><br>
 
         <label for="weight">Weight:</label><br>
-        <input type="text" id="weight" name="weight" value=""><br>
+        <input type="text" id="weight" name="weight" value="" size="10"><br>
 
         <label for="occupation">Occupation:</label><br>
-        <input type="text" id="occupation" name="occupation" value=""><br>
+        <input type="text" id="occupation" name="occupation" value="" size="10"><br>
 
         <label for="height">Height</label><br>
-        <input type="text" id="height" name="height"><br>
+        <input type="text" id="height" name="height"size="10"><br>
 
         <label for="spouse">Current Spouse</label><br>
-        <input type="text" id="spouse" name="spouse"><br></br>
+        <input type="text" id="spouse" name="spouse" size="10"><br></br>
 
         <p>Gender:</p>
         <input type="radio" id="male" name="gender" value="male">
@@ -57,19 +57,13 @@
         <input type="radio" id="nullEye" name="eyeColor" value="">
         <label for="nullEye">Don't know</label><br><br>
 
-        <div class="slidecontainer">
-          <label for="myRange">Age</label> <br>
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        </div>
-        <span id="demo">Number:</span>
-        <br>
 
-
-              <input type="button" onclick="searchByName()" value="Submit">
-          </form>
+          <input type="button" onclick="searchByName()" value="Submit">
+        </form>
       <br>
     </div>
     <div class="main">
+      <div class='container'>
       <table class="table" name="DataTable">
         <thead>
           <tr>
@@ -82,23 +76,36 @@
             <th scope="col">Weight</th>
             <th scope="col">Eye color</th>
             <th scope="col">Occupation</th>
-            <th scope="col">Current spouse</th>
             <th scope="col">Parents</th>
-            <th scope="col">Siblings</th>
+            <th scope="col">Current spouse</th>
           </tr>
         </thead>
         <tbody id= "tableBody">
           
         </tbody>
       </table>
+    </div>
+    <table class="table" name="familyTable">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">First name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Relation</th>
+        </tr>
+      </thead>
+      <tbody id ='familyTableBody'>
+
+      </tbody>
+    </table>
     </div>  
 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="styles/style.js"></script>
     <script src="data.js"></script>
     <script src="app.js"></script>
-    <script src ="addAgeToData.js"></script>
-    <script src = "recursionDescendant.js"></script>
   </body>
 </html>
 
